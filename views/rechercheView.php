@@ -8,7 +8,7 @@
 <body>
     <div>
         <h1>Ajouter un jeu à ma bibliothèque</h1>
-        <form>
+        <form method="post">
             <input type="text" name="jeuRecherche" placeholder="Rechercher un jeu">
             <input type="submit">
         </form>
