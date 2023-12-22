@@ -1,7 +1,8 @@
 <?php
     require "../models/rechercheModel.php";
 
-    if (isset($_POST)) {
+
+    if (isset($_POST['jeuRecherche'])) {
         $games = getSearchedGames($_POST['jeuRecherche']);
     }
     else {
