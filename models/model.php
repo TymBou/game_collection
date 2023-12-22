@@ -1,12 +1,7 @@
 <?php
 function connectionBDD()
 {
-    $host = "localhost";
-    $dbname = 'gamecollection';
-    $user = 'root';
-    $mdp = null;
-
-    return new PDO("mysql:host=" . $host . ";dbname=" . $dbname, $user, $mdp, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
+    return new PDO("mysql:host=" . $_ENV['host'] . ";dbname=" . $_ENV['dbname'], $_ENV['user'], $_ENV['mdp'], array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
 }
 
 function select($query)
