@@ -18,7 +18,7 @@
         <?php foreach ($games as $game) { ?>
         <div>
             <img src="<?php echo $game['URLCover']?>">
-            <h2><?php echo $game['nomJeux']?></h2>
+            <h2><?php echo $game['nomJeu']?></h2>
             <p><?php echo $game['plateforme']?></p>
             <a href="">Ajouter à ma bibliothèque</a>
         </div>
