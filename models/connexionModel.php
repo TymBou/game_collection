@@ -1,9 +1,9 @@
 <?php
-function connectionSite($email, $passwordHash)
+function connectionSite($email, $password)
 {
     $idUser = idForEmail($email);
     $passwordHashBDD = select("SELECT mdp FROM utilisateur WHERE idUtil = '$idUser';")[0]["mdp"];
-    if (password_verify($passwordHash, $passwordHashBDD)) {
+    if (password_verify($password, $passwordHashBDD)) {
         $_SESSION["user"] = $idUser;
     } else {
         echo 'erreur';
