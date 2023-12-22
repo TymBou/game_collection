@@ -8,10 +8,11 @@
 <body>
     
 <form method="post">
-  <input type="text" name="name" placeholder="">
-  <input type="password" name="pssw" placeholder="">
+  <input type="email" name="email" placeholder="">
+  <input type="password" name="pwd" placeholder="">
   
   <input type="submit" name="submit" value="SE CONNECTER">
+  <a href="">S'inscrire</a>
 </form>
 
 </body>
