@@ -20,8 +20,8 @@ if (isset($_POST["lastName"]) && isset($_POST["firstName"]) && isset($_POST["ema
 
     $message = testData($email, $pwd, $pwdConf, $lName, $fName);
     if(!$message) {
-        $pwd = password_hash($pwd, PASSWORD_BCRYPT);
-        insertUser($email, $pwd, $lName, $fName);
+        $pwdHash = password_hash($pwd, PASSWORD_BCRYPT);
+        insertUser($email, $pwdHash, $lName, $fName);
 
         header("Refresh: 4; url=unepage.php");
     }
