@@ -10,4 +10,10 @@ function select($query)
   $table = $res->fetchALL(PDO::FETCH_ASSOC);
   return $table;
 }
+
+function executeQuery($query)
+{
+    $res = dbConnect()->prepare($query);
+    $res->execute();
+}
 ?>
