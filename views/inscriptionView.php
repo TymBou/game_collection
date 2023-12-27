@@ -8,11 +8,17 @@
 <body>
     
 <form method="post">
-  <input type="text" name="lastName">
-  <input type="text" name="firstName">
-  <input type="email" name="email">
-  <input type="password" name="pwd">
-  <input type="password" name="pwdConf">
+  <input type="text" name="lastName" value="<?php echo $lName ?>">
+  <input type="text" name="firstName" value="<?php echo $fName ?>">
+  <input type="email" name="email" value="<?php echo $email ?>">
+  <input type="password" name="pwd" value="<?php echo $pwd ?>">
+  <input type="password" name="pwdConf" value="<?php echo $pwdConf ?>">
+
+  <?php
+  if ($message) {
+    echo $message;
+  }
+  ?>
   
   <input type="submit" name="submit" value="S'INSCRIRE">
   <a href="">Se connecter</a>

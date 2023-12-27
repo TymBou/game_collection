@@ -4,6 +4,13 @@ require './models/model.php';
 require './models/inscriptionModel.php';
 
 $message = '';
+
+$lName = '';
+$fName = '';
+$email = '';
+$pwd = '';
+$pwdConf = '';
+
 if (isset($_POST["lastName"]) && isset($_POST["firstName"]) && isset($_POST["email"]) && isset($_POST["pwd"]) && isset($_POST["pwdConf"])) {
     $lName = htmlspecialchars($_POST["lastName"]);
     $fName = htmlspecialchars($_POST['firstName']);
@@ -13,7 +20,7 @@ if (isset($_POST["lastName"]) && isset($_POST["firstName"]) && isset($_POST["ema
 
     $message = testData($email, $pwd, $pwdConf, $lName, $fName);
     if(!$message) {
-        $pwd = password_hash($pwd);
+        $pwd = password_hash($pwd, PASSWORD_BCRYPT);
         insertUser($email, $pwd, $lName, $fName);
 
         header("Refresh: 4; url=unepage.php");

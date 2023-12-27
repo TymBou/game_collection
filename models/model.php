@@ -13,7 +13,7 @@ function select($query)
 
 function executeQuery($query)
 {
-    $res = dbConnect()->prepare($query);
+    $res = connectionBDD()->prepare($query);
     $res->execute();
 }
 
