@@ -1,5 +1,4 @@
 <?php
-session_start(); //cette ligne et celle d'après à retirer si mis dans un autre controller
 require './models/model.php';
 
 require './models/connexionModel.php';
