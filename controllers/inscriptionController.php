@@ -22,6 +22,7 @@ if (isset($_POST["lastName"]) && isset($_POST["firstName"]) && isset($_POST["ema
     if(!$message) {
         $pwdHash = password_hash($pwd, PASSWORD_BCRYPT);
         insertUser($email, $pwdHash, $lName, $fName);
+        $message = 'compte créé avec succès';
 
         header("Refresh: 4; url=unepage.php");
     }
