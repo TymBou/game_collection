@@ -24,10 +24,10 @@ CREATE TABLE BIBLIOTHEQUE(
    idBibli SMALLINT,
    heureDeJeu DECIMAL(10,2) NOT NULL,
    idUtil int NOT NULL,
-   idJeux int NOT NULL,
+   idJeu int NOT NULL,
    PRIMARY KEY(idBibli),
    FOREIGN KEY(idUtil) REFERENCES UTILISATEUR(idUtil),
-   FOREIGN KEY(idJeux) REFERENCES JEU(idJeux)
+   FOREIGN KEY(idJeu) REFERENCES JEU(idJeu)
 );
 --
 -- Inserts
