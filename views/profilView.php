@@ -8,13 +8,13 @@
 <body>
     
     <?php 
-        echo $lName;
-        echo $fName;
-        echo $email;
+        echo $lName . '<br>';
+        echo $fName . '<br>';
+        echo $email . '<br>';
     ?>
-    <a href="">MODIFIER MON PROFIL</a>
-    <a href="">SUPPRIMER MON COMPTE</a>
-    <a href="">SE DÉCONNECTER</a>
+    <a href="?action=modifier">MODIFIER MON PROFIL</a>
+    <a href="?action=supprimer">SUPPRIMER MON COMPTE</a>
+    <a href="?action=deconnecter">SE DÉCONNECTER</a>
 
 
 </body>

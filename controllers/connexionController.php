@@ -1,6 +1,4 @@
 <?php
-require './models/model.php';
-
 require './models/connexionModel.php';
 
 if (isset($_POST["email"]) && isset($_POST["pwd"])) {

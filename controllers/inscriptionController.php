@@ -1,6 +1,4 @@
 <?php
-require './models/model.php';
-
 require './models/inscriptionModel.php';
 
 $message = '';
