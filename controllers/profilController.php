@@ -1,4 +1,6 @@
 <?php
+require './models/inscriptionModel.php';
+require './models/profilModel.php';
 
 $infos = select("SELECT nomUtil, prenom, email FROM utilisateur WHERE idUtil = " . $_SESSION['user'])[0];
 
@@ -24,6 +26,4 @@ if ($dir == 'profil') {
 } elseif ($dir == 'profilFormulaire') {
     require './views/profilFormulaireView.php';
 }
-
-
 ?>
