@@ -12,9 +12,9 @@
         echo $fName . '<br>';
         echo $email . '<br>';
     ?>
-    <a href="?action=modifier">MODIFIER MON PROFIL</a>
-    <a href="?action=supprimer">SUPPRIMER MON COMPTE</a>
-    <a href="?action=deconnecter">SE DÉCONNECTER</a>
+    <a href="?dir=profil&action=modifier">MODIFIER MON PROFIL</a>
+    <a href="?dir=profil&action=supprimer">SUPPRIMER MON COMPTE</a>
+    <a href="?dir=profil&action=deconnecter">SE DÉCONNECTER</a>
 
 
 </body>

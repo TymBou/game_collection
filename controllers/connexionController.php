@@ -12,7 +12,7 @@ if (isset($_POST["email"]) && isset($_POST["pwd"])) {
     if (isset($_SESSION['user'])) {
         $fName = select("SELECT prenom FROM utilisateur WHERE idUtil = " . $_SESSION['user'])[0]['prenom'];
         $message = "Bienvenue " . $fName;
-        header("Refresh: 3; url=/game_collection");
+        header("Refresh: 3; url=/game_collection/?dir=profil");
     } else {
         $message = "Mauvais email/mot de passe";
     }

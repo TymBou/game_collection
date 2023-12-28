@@ -1,10 +1,12 @@
 <?php
 function connectionSite($email, $password)
 {
-    $idUser = idForEmail($email);
-    $passwordHashBDD = select("SELECT mdp FROM utilisateur WHERE idUtil = '$idUser';")[0]["mdp"];
-    if (password_verify($password, $passwordHashBDD)) {
-        $_SESSION["user"] = $idUser;
+    if ($email && $password) {
+        $idUser = idForEmail($email);
+        $passwordHashBDD = select("SELECT mdp FROM utilisateur WHERE idUtil = '$idUser';")[0]["mdp"];
+        if (password_verify($password, $passwordHashBDD)) {
+            $_SESSION["user"] = $idUser;
+        }
     }
 }
 
