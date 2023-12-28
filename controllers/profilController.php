@@ -1,7 +1,5 @@
 <?php
 
-$_SESSION['user'] = 5;
-
 $infos = select("SELECT nomUtil, prenom, email FROM utilisateur WHERE idUtil = " . $_SESSION['user'])[0];
 
 $lName = $infos['nomUtil'];
@@ -15,10 +13,13 @@ if(isset($_GET['action'])) {
     } elseif($action == 'supprimer') {
 
     } elseif($action == 'deconnecter') {
-        session_destroy();
-        session_unset();
-    }
+        echo 'test1';
+        unset($_SESSION['user']);
+        header('Location:index.php');
+        var_dump($_SESSION);
+        }
+    echo 'test2';
 }
-
+echo 'test3';
 require './views/profilView.php';
 ?>

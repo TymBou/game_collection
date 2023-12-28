@@ -7,7 +7,7 @@ if (isset($_POST["email"]) && isset($_POST["pwd"])) {
 
     connectionSite($email, $pwd);
     echo "connect " . $_SESSION['user'];
-    header("Refresh: 4; url=unepage.php");
+    header("Refresh: 4; url=");
 }
 
 require './views/connexionView.php';

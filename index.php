@@ -6,5 +6,10 @@ $dotenv->load();
 
 require './models/model.php';
 
-require('controllers/profilController.php');
+if(!isset($_SESSION['user'])) {
+    require('controllers/connexionController.php');
+} else {
+    require('controllers/profilController.php');
+}
+
 ?>
