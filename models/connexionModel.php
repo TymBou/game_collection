@@ -5,8 +5,6 @@ function connectionSite($email, $password)
     $passwordHashBDD = select("SELECT mdp FROM utilisateur WHERE idUtil = '$idUser';")[0]["mdp"];
     if (password_verify($password, $passwordHashBDD)) {
         $_SESSION["user"] = $idUser;
-    } else {
-        echo 'erreur';
     }
 }
 

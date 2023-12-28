@@ -21,7 +21,7 @@
   ?>
   
   <input type="submit" name="submit" value="S'INSCRIRE">
-  <a href="">Se connecter</a>
+  <a href="/game_collection">Se connecter</a>
 </form>
 
 </body>

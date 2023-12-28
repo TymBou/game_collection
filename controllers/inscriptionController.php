@@ -22,7 +22,7 @@ if (isset($_POST["lastName"]) && isset($_POST["firstName"]) && isset($_POST["ema
         insertUser($email, $pwdHash, $lName, $fName);
         $message = 'compte créé avec succès';
 
-        header("Refresh: 4; url=unepage.php");
+        header("Refresh: 3; url=/game_collection");
     }
 }
 

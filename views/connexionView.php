@@ -8,11 +8,17 @@
 <body>
     
 <form method="post">
-  <input type="email" name="email" placeholder="">
-  <input type="password" name="pwd" placeholder="">
-  
+  <input type="email" name="email" value="<?php echo $email ?>">
+  <input type="password" name="pwd">
+
+  <?php
+  if ($message) {
+    echo $message;
+  }
+  ?>
+
   <input type="submit" name="submit" value="SE CONNECTER">
-  <a href="">S'inscrire</a>
+  <a href="/game_collection/?dir=inscription">S'inscrire</a>
 </form>
 
 </body>

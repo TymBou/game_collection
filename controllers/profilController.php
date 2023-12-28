@@ -13,13 +13,10 @@ if(isset($_GET['action'])) {
     } elseif($action == 'supprimer') {
 
     } elseif($action == 'deconnecter') {
-        echo 'test1';
         unset($_SESSION['user']);
-        header('Location:index.php');
+        header('Location:/game_collection');
         var_dump($_SESSION);
         }
-    echo 'test2';
 }
-echo 'test3';
 require './views/profilView.php';
 ?>

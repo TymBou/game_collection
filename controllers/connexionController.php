@@ -1,13 +1,21 @@
 <?php
 require './models/connexionModel.php';
 
+$message = '';
+$email = '';
 if (isset($_POST["email"]) && isset($_POST["pwd"])) {
     $email = htmlspecialchars($_POST["email"]);
     $pwd =  htmlspecialchars($_POST["pwd"]);
 
     connectionSite($email, $pwd);
-    echo "connect " . $_SESSION['user'];
-    header("Refresh: 4; url=");
+
+    if (isset($_SESSION['user'])) {
+        $fName = select("SELECT prenom FROM utilisateur WHERE idUtil = " . $_SESSION['user'])[0]['prenom'];
+        $message = "Bienvenue " . $fName;
+        header("Refresh: 3; url=/game_collection");
+    } else {
+        $message = "Mauvais email/mot de passe";
+    }
 }
 
 require './views/connexionView.php';
