@@ -1,8 +1,14 @@
 <?php
-function updateUser($email, $pwd, $lName, $fName)
+function updateUserPwd($email, $pwd, $lName, $fName)
 {
     $idUtil = $_SESSION['user'];
     executeQuery("UPDATE utilisateur SET email = '$email', mdp = '$pwd', nomUtil = '$lName', prenom = '$fName' WHERE idUtil = $idUtil");
+}
+
+function updateUser($email, $lName, $fName)
+{
+    $idUtil = $_SESSION['user'];
+    executeQuery("UPDATE utilisateur SET email = '$email', nomUtil = '$lName', prenom = '$fName' WHERE idUtil = $idUtil");
 }
 
 function deleteUser()
@@ -13,14 +19,17 @@ function deleteUser()
 
 function testData($email, $pwd, $pwdConf, $lName, $fName)
 {
-    if (!($email && $pwd && $pwdConf && $lName && $fName)) {
+    if (!($email && $lName && $fName)) {
         return 'champs vides';
-
-    } elseif (!($pwd == $pwdConf)) {
-        return 'mots de passe differents';
 
     } elseif (AlreadyUsedEmail($email)) {
         return 'email déjà utilisé';
+
+    } elseif (!$pwd && !$pwdConf) {
+        return 'pas pwd';
+
+    } elseif (!($pwd == $pwdConf)) {
+        return 'mots de passe differents';
 
     } else {
         return '';

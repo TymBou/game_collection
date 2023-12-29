@@ -15,13 +15,18 @@ if ($dir == 'profilFormulaire') {
         $email = htmlspecialchars($_POST['email']);
         $pwd = htmlspecialchars($_POST["pwd"]);
         $pwdConf = htmlspecialchars($_POST["pwdConf"]);
-    
+            
         $message = testData($email, $pwd, $pwdConf, $lName, $fName);
         if(!$message) {
             $pwdHash = password_hash($pwd, PASSWORD_BCRYPT);
-            updateUser($email, $pwdHash, $lName, $fName);
+            updateUserPwd($email, $pwdHash, $lName, $fName);
+
+        } elseif ($message == 'pas pwd') {
+            updateUser($email, $lName, $fName);
+        }
+
+        if (!$message || $message == 'pas pwd') {
             $message = 'compte modifié avec succès';
-    
             header("Refresh: 3; url=/game_collection/?dir=profil");
         }
     }
