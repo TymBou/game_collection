@@ -13,7 +13,7 @@
         echo $email . '<br>';
     ?>
     <a href="?dir=profilFormulaire">MODIFIER MON PROFIL</a>
-    <a href="?dir=profil&action=supprimer">SUPPRIMER MON COMPTE</a>
+    <a href="?dir=profil&action=supprimer" onclick="return confirm('Voulez vous vraiment supprimer votre compte?')">SUPPRIMER MON COMPTE</a>
     <a href="?dir=profil&action=deconnecter">SE DÉCONNECTER</a>
 
 

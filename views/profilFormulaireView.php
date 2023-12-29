@@ -20,9 +20,9 @@
   }
   ?>
 
-  <a href="?dir=profil&action=valModifier">MODIFIER</a>
-  <a href="?dir=profil&action=supprimer">SUPPRIMER MON COMPTE</a>
-  <a href="?dir=profil&action=deconnecter">SE DÉCONNECTER</a>
+  <input type="submit" name="submit" value="MODIFIER">
+  <a href="?dir=profilFormulaire&action=supprimer" onclick="return confirm('Voulez vous vraiment supprimer votre compte?')">SUPPRIMER MON COMPTE</a>
+  <a href="?dir=profilFormulaire&action=deconnecter">SE DÉCONNECTER</a>
 </form>
 
 </body>
