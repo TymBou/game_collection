@@ -1,4 +1,6 @@
-CREATE TABLE UTILISATEUR(
+DROP TABLE IF EXISTS utilisateur;
+
+CREATE TABLE utilisateur(
    idUtil int,
    email VARCHAR(50) NOT NULL,
    mdp VARCHAR(100) NOT NULL,
@@ -7,7 +9,9 @@ CREATE TABLE UTILISATEUR(
    PRIMARY KEY(idUtil)
 );
 
-CREATE TABLE JEU(
+DROP TABLE IF EXISTS jeu;
+
+CREATE TABLE jeu(
    idJeu int,
    nomJeu VARCHAR(50) NOT NULL,
    dateSortie DATE NOT NULL,
@@ -19,15 +23,16 @@ CREATE TABLE JEU(
    PRIMARY KEY(idJeu)
 );
 
+DROP TABLE IF EXISTS bibliotheque;
 
-CREATE TABLE BIBLIOTHEQUE(
+CREATE TABLE bibliotheque(
    idBibli SMALLINT,
    heureDeJeu DECIMAL(10,2) NOT NULL,
    idUtil int NOT NULL,
-   idJeux int NOT NULL,
+   idJeu int NOT NULL,
    PRIMARY KEY(idBibli),
    FOREIGN KEY(idUtil) REFERENCES UTILISATEUR(idUtil),
-   FOREIGN KEY(idJeux) REFERENCES JEU(idJeux)
+   FOREIGN KEY(idJeu) REFERENCES JEU(idJeu)
 );
 --
 -- Inserts
