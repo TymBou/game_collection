@@ -9,9 +9,10 @@ if(!isset($_SESSION['user']) && !isset($_GET['dir'])) {
         require('controllers/inscriptionController.php');
     } elseif ($dir == 'profil' || $dir == 'profilFormulaire') {
         require('controllers/profilController.php');
-    }
-    elseif($dir == 'update') {
+    } elseif($dir == 'update') {
         require('controllers/updateJeuController.php');
     }
+}else {
+    require('controllers/rechercheController.php');
 } 
 ?>
