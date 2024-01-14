@@ -10,8 +10,9 @@ if(!isset($_SESSION['user']) && !isset($_GET['dir'])) {
     } elseif ($dir == 'profil' || $dir == 'profilFormulaire') {
         require('controllers/profilController.php');
     }
+    elseif($dir == 'ajout') {
+        require('controllers/updateJeuController.php');
+    }
 
-} else {
-    require('controllers/rechercheController.php');
-}
+} 
 ?>

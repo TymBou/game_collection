@@ -1,8 +1,8 @@
 <?php
 
-    require("models/ajoutJeuBibliModel.php");
+    require("models/updateJeuModel.php");
 
-    $game = getInfoGame(1);
+    $game = getInfoGame($_GET['jeu']);
 
-    require("views/ajoutJeuBibliView.php");
+    require("views/updateJeuView.php");
 ?>
