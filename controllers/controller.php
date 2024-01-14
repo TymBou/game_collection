@@ -9,9 +9,8 @@ if(!isset($_SESSION['user']) && !isset($_GET['dir'])) {
         require('controllers/inscriptionController.php');
     } elseif ($dir == 'profil' || $dir == 'profilFormulaire') {
         require('controllers/profilController.php');
+    } elseif ($dir == 'recherche') {
+        require('controllers/rechercheController.php');
     }
-
-} else {
-    require('controllers/rechercheController.php');
 }
 ?>
