@@ -1,3 +1,5 @@
+DROP TABLE IF EXISTS bibliotheque;
+DROP TABLE IF EXISTS jeu;
 DROP TABLE IF EXISTS utilisateur;
 
 CREATE TABLE utilisateur(
@@ -9,7 +11,7 @@ CREATE TABLE utilisateur(
    PRIMARY KEY(idUtil)
 );
 
-DROP TABLE IF EXISTS jeu;
+
 
 CREATE TABLE jeu(
    idJeu int,
@@ -22,8 +24,6 @@ CREATE TABLE jeu(
    URLSite VARCHAR(100) NOT NULL,
    PRIMARY KEY(idJeu)
 );
-
-DROP TABLE IF EXISTS bibliotheque;
 
 CREATE TABLE bibliotheque(
    idBibli SMALLINT,

@@ -22,7 +22,7 @@
                     <input type="number" name="nbrHeure">
                     <input type="submit">
                 </form>
-                <a href="">Supprimer le jeu de ma bibliothèque</a>
+                <a href="?dir=update&jeu=<?php echo $game['idJeu'] ?>&action=supprimer">Supprimer le jeu de ma bibliothèque</a>
             </div>
         </div>
     </div>

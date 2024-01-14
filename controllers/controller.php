@@ -13,6 +13,5 @@ if(!isset($_SESSION['user']) && !isset($_GET['dir'])) {
     elseif($dir == 'update') {
         require('controllers/updateJeuController.php');
     }
-
 } 
 ?>
