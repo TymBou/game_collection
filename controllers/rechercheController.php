@@ -8,6 +8,8 @@
     else {
         $games = getAllGames($_SESSION['user']);
     }
-    
-    require("views/rechercheView.php");
+
+    if (sizeof($games) == 0) {
+         require("views/rechercheVideView.php"); 
+    } else { require("views/rechercheView.php"); }
 ?>
