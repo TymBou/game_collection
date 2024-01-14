@@ -11,8 +11,8 @@ if(!isset($_SESSION['user']) && !isset($_GET['dir'])) {
         require('controllers/profilController.php');
     } elseif($dir == 'update') {
         require('controllers/updateJeuController.php');
+    } elseif ($dir == 'recherche') {
+        require('controllers/rechercheController.php');
     }
-}else {
-    require('controllers/rechercheController.php');
-} 
+}
 ?>
