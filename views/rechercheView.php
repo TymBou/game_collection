@@ -20,7 +20,7 @@
             <img src="<?php echo $game['URLCover']?>">
             <h2><?php echo $game['nomJeu']?></h2>
             <p><?php echo $game['plateforme']?></p>
-            <a href="?dir=ajout&jeu=<?php echo $game['idJeu'] ?>">Ajouter à ma bibliothèque</a>
+            <a href="?dir=update&jeu=<?php echo $game['idJeu'] ?>">Ajouter à ma bibliothèque</a>
         </div>
         <?php } ?>
     </div>
