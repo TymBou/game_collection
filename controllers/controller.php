@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
 if(!isset($_SESSION['user']) && !isset($_GET['dir'])) {
     require('controllers/connexionController.php');
 
@@ -9,9 +10,16 @@ if(!isset($_SESSION['user']) && !isset($_GET['dir'])) {
         require('controllers/inscriptionController.php');
     } elseif ($dir == 'profil' || $dir == 'profilFormulaire') {
         require('controllers/profilController.php');
+    } elseif($dir == 'update') {
+        require('controllers/updateJeuController.php');
+    } elseif ($dir == 'recherche') {
+        require('controllers/rechercheController.php');
     }
-
-} else {
-    require('controllers/rechercheController.php');
 }
+=======
+require('./models/model.php');
+
+
+require('./views/view.php');
+>>>>>>> feature/footerheader
 ?>

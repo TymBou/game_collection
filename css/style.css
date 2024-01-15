@@ -3,6 +3,10 @@ header{
 }
 header > button{
     background: none;
+<<<<<<< HEAD
+=======
+    backface-visibility: hidden;
+>>>>>>> e46c1431460eb6ccac41d80ec90020f4fe375256
     color: #FFFFFF;
 }
 footer{

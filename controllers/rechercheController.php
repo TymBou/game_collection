@@ -1,12 +1,14 @@
 <?php
 
     require("models/rechercheModel.php");
-
-    if (isset($_POST['jeuRecherche'])) {
-        $games = getSearchedGames( htmlspecialchars($_POST['jeuRecherche']));
+    if(isset($_GET['action']) AND $_GET['action'] = 'ajout') {
+        ajoutJeuBibli($_GET['jeu']);
+        header('Location:/game_collection');
+    } elseif (isset($_POST['jeuRecherche'])) {
+        $games = getSearchedGames($_SESSION['user'], htmlspecialchars($_POST['jeuRecherche']));
+    } else {
+        $games = getAllGames($_SESSION['user']);
     }
-    else {
-        $games = getAllGames();
-    }
+    
     require("views/rechercheView.php");
 ?>
