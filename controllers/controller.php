@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
 if(!isset($_SESSION['user']) && !isset($_GET['dir'])) {
     require('controllers/connexionController.php');
 
@@ -15,4 +16,10 @@ if(!isset($_SESSION['user']) && !isset($_GET['dir'])) {
         require('controllers/rechercheController.php');
     }
 }
+=======
+require('./models/model.php');
+
+
+require('./views/view.php');
+>>>>>>> feature/footerheader
 ?>
