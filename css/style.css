@@ -1,16 +1,120 @@
-header{
-    background-color: #211F2A;
+*{
+    font-family: 'Barlow', sans-serif;
 }
-header > button{
+
+header {
+    background-color: #211F2A;
+    margin-bottom: 5%;
+}
+
+header>a {
     background: none;
     backface-visibility: hidden;
     color: #FFFFFF;
+    border: 1px solid #211F2A;
 }
-footer{
+
+main {
+    width: 1440px;
+    height: 746px;
+}
+
+footer {
     background-color: #211F2A;
+    text-align: center;
 }
-body{
+
+body {
     background-color: #211F2A;
     color: #FFFFFF;
     text-decoration: none;
+}
+
+.logo {
+    float: left;
+}
+
+.liens {
+    float: right;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+
+.connexionDiv {
+    background-color: #252836;
+    color: #FFFFFF;
+    border-radius: 20px;
+    border: 1px solid #252836;
+    width: 600px;
+}
+
+.connexionDiv input:not(.connexionBtn) {
+    width: 520px;
+    height: 36px;
+}
+
+.btn {
+    background-color: #6757D6;
+    color: #FFFFFF;
+    border-radius: 6px;
+    border: 1px solid #6757D6;
+    cursor: pointer;
+    margin-top: 5%;
+    width: 131.89px;
+    height: 36px;
+    margin-bottom: 5%;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 10%;
+    width: 50%;
+}
+
+.profil {
+    margin-left: 10%;
+    margin-top: 5%;
+}
+
+.profil input {
+    width: 300px;
+    height: 36px;
+}
+
+.form input {
+    width: 300px;
+    height: 36px;
+}
+
+input {
+    background-color: #2B2F40;
+    border-radius: 4px;
+    border: 1px solid #2B2F40;
+    color: #FFFFFF;
+}
+
+a {
+    text-decoration: none;
+    color: white;
 }
