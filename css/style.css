@@ -1,0 +1,15 @@
+header{
+    background-color: #211F2A;
+}
+header > button{
+    background: none;
+    color: #FFFFFF;
+}
+footer{
+    background-color: #211F2A;
+}
+body{
+    background-color: #211F2A;
+    color: #FFFFFF;
+    text-decoration: none;
+}
