@@ -24,6 +24,6 @@ function addJeu($id, $user) {
 }
 
 function verifbibli($jeu, $user) {
-    return select('SELECT jeu.idJeu FROM jeu INNER JOIN bibliotheque ON bibliotheque.idJeu = jeu.idJeu WHERE jeu.idJeu = "' . $jeu . '" AND idUtil = "' . $user . '"')[0];
+    return select('SELECT jeu.idJeu FROM jeu INNER JOIN bibliotheque ON bibliotheque.idJeu = jeu.idJeu WHERE jeu.idJeu = "' . $jeu . '" AND idUtil = "' . $user . '"');
 }
 ?>

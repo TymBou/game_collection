@@ -2,12 +2,19 @@
     require("models/creerJeuModel.php");
     
     if (isset($_POST["editeurJeu"]) && isset($_POST["date"]) && isset($_POST["urlCover"]) && isset($_POST["urlSite"]) && isset($_POST["nomJeu"]) && (isset($_POST["play"]) || isset($_POST["xBox"]) || isset($_POST["nintendo"]) || isset($_POST["pc"]))) {
-        $jeu = verifJeu($_POST["nomJeu"])[0];
-        if (sizeof($jeu) > 0) {
-            if (sizeof(verifbibli($jeu['idJeu'], $_SESSION['user'])) == 0) {
-                addJeu($jeu['idJeu'], $_SESSION['user']);
+        
+        $jeu = verifJeu($_POST["nomJeu"]);
+        if ($jeu != null) {
+            var_dump($jeu);
+            $jeu = $jeu[0];
+        
+            if (sizeof($jeu) > 0) {
+                $bibli = verifbibli($jeu['idJeu'], $_SESSION['user']);
+                if (sizeof($bibli) == 0) {
+                    addJeu($jeu['idJeu'], $_SESSION['user']);
+                }
+                require("views/jeuExisteView.php");
             }
-            require("views/jeuExisteView.php");
         } else {
             $cpt = 0;
             if (isset($_POST["play"])) {
@@ -54,12 +61,12 @@
             }
             $id = getNewId()['MAX(idJeu)'] +1;
 
-            creerJeu($id, htmlspecialchars($_POST['nomJeu']), $_POST['date'], htmlspecialchars($_POST['editeurJeu']), $platform, htmlspecialchars($_POST['descJeu']), htmlspecialchars($_POST['urlCover']), htmlspecialchars($_POST['urlSite']));
+            $date = $_POST['date'];
+
+            creerJeu($id, htmlspecialchars($_POST['nomJeu']), $date, htmlspecialchars($_POST['editeurJeu']), $platform, htmlspecialchars($_POST['descJeu']), htmlspecialchars($_POST['urlCover']), htmlspecialchars($_POST['urlSite']));
+            header('location:/game_collection/');
         }
-        
     }else {
         require("views/creerJeuView.php");
     }
-
-    
 ?>
