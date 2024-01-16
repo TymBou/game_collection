@@ -7,7 +7,7 @@
     <link href="./css/style.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <title>Connexion</title>
+    <title>Game Collection - Profil</title>
 </head>
 
 <body>
