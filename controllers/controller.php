@@ -13,6 +13,8 @@ if(!isset($_SESSION['user']) && !isset($_GET['dir'])) {
         require('controllers/updateJeuController.php');
     } elseif ($dir == 'recherche') {
         require('controllers/rechercheController.php');
+    } elseif ($dir == 'creerJeu') {
+        require('controllers/creerJeuController.php');
     }
 }
 ?>
