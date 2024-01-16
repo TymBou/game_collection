@@ -16,5 +16,8 @@ if(!isset($_SESSION['user']) && !isset($_GET['dir'])) {
     } elseif ($dir == 'creerJeu') {
         require('controllers/creerJeuController.php');
     }
+    
+}else {
+    require('controllers/acceuilController.php');
 }
 ?>
