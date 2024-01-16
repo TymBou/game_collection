@@ -12,7 +12,25 @@
 
 <body>
 
-  
+  <div>
+    <h2>Classement des temps passées</h2>
+  </div>
+  <div>
+    <table>
+        <tr>
+            <th>Joueur</th>
+            <th>Temps Passés</th>
+            <th>Jeu favori</th>
+        </tr>
+        <?php foreach ($utils as $util) { ?>
+        <tr>
+            <th><?php echo $util['nomUtil']?></th>
+            <th><?php echo $util['SUM(heureDeJeu)']?></th>
+            <th><?php echo $util['nomJeu']?></th>
+        </tr>
+            <?php } ?>
+    </table>
+  </div>
   
 </body>
 <footer>
