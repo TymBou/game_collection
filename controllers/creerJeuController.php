@@ -1,16 +1,13 @@
 <?php
     require("models/creerJeuModel.php");
-
+    
     if (isset($_POST["editeurJeu"]) && isset($_POST["date"]) && isset($_POST["urlCover"]) && isset($_POST["urlSite"]) && isset($_POST["nomJeu"]) && (isset($_POST["play"]) || isset($_POST["xBox"]) || isset($_POST["nintendo"]) || isset($_POST["pc"]))) {
         $jeu = verifJeu($_POST["nomJeu"])[0];
         if (sizeof($jeu) > 0) {
             if (sizeof(verifbibli($jeu['idJeu'], $_SESSION['user'])) == 0) {
                 addJeu($jeu['idJeu'], $_SESSION['user']);
             }
-            sleep(5);
             require("views/jeuExisteView.php");
-            
-            header('Location:/game_collection');
         } else {
             $cpt = 0;
             if (isset($_POST["play"])) {
