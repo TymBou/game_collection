@@ -16,7 +16,7 @@
 
     <div>
         <h2>Aucun jeu disponible :</h2>
-        <a href=''>gnangnan un jeu</a>
+        <a href='/game_collection/?dir=creerJeu'>gnangnan un jeu</a>
     </div>
 </body>
 </html>
