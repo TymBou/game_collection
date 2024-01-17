@@ -11,28 +11,6 @@
 </head>
 
 <body>
-  <header>
-    <a href="/game_collection/">
-      <img class="logo" src="./ressources/Images/logo.png" alt="Game Collection" hover="Logo Game Collection">
-    </a>
-
-    <nav class="liens">
-      <ul>
-        <li>
-          <a href="/game_collection/">MA BIBLIOTHÈQUE</a>
-        </li>
-        <li>
-          <a href="/game_collection/?dir=creerJeu">AJOUTER UN JEU</a>
-        </li>
-        <li>
-          <a href="/game_collection/?dir=classement">CLASSEMENT</a>
-        </li>
-        <li>
-          <a href="/game_collection/?dir=profil">PROFIL</a>
-        </li>
-      </ul>
-      </div>
-  </header>
   <main>
     <div class="profil">
       <h1>Mon Profil</h1>
@@ -55,14 +33,13 @@
         ?>
         <br \>
         <input class="btn" type="submit" name="submit" value="MODIFIER">
+        <br \>
         <a class="btn" href="?dir=profilFormulaire&action=supprimer" onclick="return confirm('Voulez vous vraiment supprimer votre compte?')">SUPPRIMER MON COMPTE</a>
+        <br \><br \><br \>
         <a class="btn" href="?dir=profilFormulaire&action=deconnecter">SE DÉCONNECTER</a>
       </form>
     </div>
   </main>
-  <footer>
-    Game Collection - 2023 - Tout droits réservés
-  </footer>
 </body>
 
 

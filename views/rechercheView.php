@@ -8,31 +8,10 @@
     <title>Game Collection - Recherche</title>
 </head>
 
-<header>
-    <a href="/game_collection/">
-        <img class="logo" src="./ressources/Images/logo.png" alt="Game Collection" hover="Logo Game Collection">
-    </a>
 
-    <nav class="liens">
-        <ul>
-            <li>
-                <a href="/game_collection/">MA BIBLIOTHÈQUE</a>
-            </li>
-            <li>
-                <a href="/game_collection/?dir=creerJeu">AJOUTER UN JEU</a>
-            </li>
-            <li>
-                <a href="/game_collection/?dir=classement">CLASSEMENT</a>
-            </li>
-            <li>
-                <a href="/game_collection/?dir=profil">PROFIL</a>
-            </li>
-        </ul>
-        </div>
-</header>
-<main>
+<body>
 
-    <body>
+    <main>
         <div>
             <h1>Ajouter un jeu à ma bibliothèque</h1>
             <form method="post">
@@ -51,11 +30,7 @@
                 </div>
             <?php } ?>
         </div>
-    </body>
-</main>
-
-<footer>
-    Game Collection - 2023 - Tout droits réservés
-</footer>
+    </main>
+</body>
 
 </html>

@@ -12,16 +12,15 @@
 
 <body>
   <main>
-
-    <div class="connexionDiv container">
-      <div class="centered-element">
+    <div class="container connexionDiv">
+      <div class="item">
         <h1>Se connecter à Game Collection</h1>
         <form method="post">
           <p>Email :</p>
-          <input type="email" name="email" value="<?php echo $email ?>" style="width:520px;">
+          <input type="email" name="email" value="<?php echo $email ?>">
           <p>Mot de passe :</p>
           <input type="password" name="pwd">
-
+          <br \>
           <?php
           if ($message) {
             echo $message;
@@ -29,7 +28,8 @@
           ?>
           <br \>
           <input class="btn connexionBtn" type="submit" name="submit" value="SE CONNECTER">
-          <a href="/game_collection/?dir=inscription">S'inscrire</a>
+          <br \>
+          <a style="margin-bottom: 100%;" href="/game_collection/?dir=inscription">S'inscrire</a>
         </form>
       </div>
     </div>

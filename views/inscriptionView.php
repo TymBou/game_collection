@@ -12,7 +12,7 @@
 
 <body>
 
-  <div class="connexionDiv container">
+  <div class="inscriptionDiv container">
     <div class="centered-element">
       <h1>Inscription</h1>
       <form method="post">
@@ -33,14 +33,12 @@
         }
         ?>
         <br \>
-        <input class="btn" type="submit" name="submit" value="S'INSCRIRE">
+        <input class="btn inscriptionBtn" type="submit" name="submit" value="S'INSCRIRE">
+        <br \>
         <a href="/game_collection">Se connecter</a>
       </form>
     </div>
   </div>
 </body>
-<footer>
-  Game Collection - 2023 - Tout droits réservés
-</footer>
 
 </html>
