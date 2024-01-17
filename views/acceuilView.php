@@ -12,10 +12,10 @@
 
 <body>
   <main>
-    <div>
-      <img src="ressources\Images\20221130_165430.jpg">
-      <h1>Salut <?php echo $nomUtil; ?> ! Prêt à ajouter des jeux à ta collection ?</h1>
+    <div class="firstAccueil">
+      <h1 class="h1acc">SALUT <?php echo $nomUtil; ?> ! <br \> PRÊT À AJOUTER DES <br \> JEUX À TA COLLECTION ?</h1>
     </div>
+    <h3>Mes jeux</h3>
     <div class="cards">
       <?php foreach ($games as $game) { ?>
         <div class="card" style="background: url(<?php echo $game['URLCover'] ?>) 50%, linear-gradient(to top, rgba(0, 0, 0, 0.9) 40%, rgba(255, 255, 255, 0.9) 60%); background-blend-mode:multiply;">

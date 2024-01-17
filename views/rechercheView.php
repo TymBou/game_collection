@@ -12,11 +12,12 @@
 <body>
 
     <main>
-        <div>
+        <div style="margin-left:5%">
             <h1>Ajouter un jeu à ma bibliothèque</h1>
             <form method="post">
                 <input type="text" name="jeuRecherche" placeholder="Rechercher un jeu">
-                <input type="submit">
+                <br \>
+                <input class="btn" type="submit" style="margin:0 !important;">
             </form>
         </div>
 
@@ -27,7 +28,7 @@
                         <div class="textCard">
                             <h2><?php echo $game['nomJeu'] ?></h2>
                             <p><?php echo $game['plateforme'] ?></p>
-                            <a href="?dir=recherche&action=ajout&jeu=<?php echo $game['idJeu'] ?>">Ajouter à ma bibliothèque</a>
+                            <a class="btn" href="?dir=recherche&action=ajout&jeu=<?php echo $game['idJeu'] ?>">Ajouter à ma bibliothèque</a>
                         </div>
                     </div>
                 </div>

@@ -112,7 +112,7 @@ li a {
     height: 36px;
 }
 
-.form input {
+form input:not(.btn) {
     width: 300px;
     height: 36px;
 }
@@ -178,6 +178,8 @@ table {
 }
 
 .cards{
+    margin-left: 10%;
+    margin-right: 10%;
     display: flex;
     justify-content: space-between;
 }
@@ -188,7 +190,7 @@ img {
 
 .infoCard{
     position: absolute;
-    bottom: 0;
+    bottom: 25;
     width:100%;
 }
 
@@ -197,4 +199,24 @@ img {
 }
 .heureDeJeu{
     font-size: 1.2em;
+}
+
+.h1acc{
+    margin-left: 5%;
+    font-size: 3em;
+    position: absolute;
+    bottom: 30;
+}
+
+.firstAccueil{
+    height: 400px;
+    background: url("../ressources/Images/backgroundAccueil.png"), rgba(0, 0, 0, 0.3);
+    background-blend-mode: multiply;
+    background-size: cover;
+    margin-bottom: 3%;
+    position: relative;
+}
+
+h3{
+    margin-left: 10%;
 }
