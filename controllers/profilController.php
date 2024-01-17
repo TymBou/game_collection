@@ -27,7 +27,7 @@ if ($dir == 'profilFormulaire') {
 
         if (!$message || $message == 'pas pwd') {
             $message = 'compte modifié avec succès';
-            header("Refresh: 3; url=/game_collection/?dir=profil");
+            header("Refresh: 2; url=/game_collection/?dir=profil");
         }
     }
 }
