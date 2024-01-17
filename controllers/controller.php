@@ -7,7 +7,7 @@ if(!isset($_SESSION['user']) && !isset($_GET['dir'])) {
 
     if ($dir == 'inscription') {
         require('controllers/inscriptionController.php');
-    } elseif ($dir == 'profil') {
+    } elseif ($dir == 'profil' || $dir == 'profilFormulaire') {
         require("views/headerView.php");
         require('controllers/profilController.php');
     } elseif($dir == 'update') {
