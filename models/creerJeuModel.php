@@ -1,8 +1,8 @@
 <?php
 function creerJeu($id, $nom, $date, $editeur, $plateforme, $descr, $cover, $site) {
     select('INSERT INTO jeu VALUE ( ' . $id .', "'
-                                        . $nom .'", '
-                                        . $date .', "'
+                                        . $nom .'", "'
+                                        . $date .'", "'
                                         . $editeur .'", "'
                                         . $plateforme .'", "'
                                         . $descr .'", "'

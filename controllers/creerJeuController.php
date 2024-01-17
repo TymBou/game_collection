@@ -61,10 +61,10 @@
             }
             $id = getNewId()['MAX(idJeu)'] +1;
 
-            $date = $_POST['date'];
-
+            $date = date('Y-m-d H:i:s', strtotime($_POST['date']));
+            echo $date;
             creerJeu($id, htmlspecialchars($_POST['nomJeu']), $date, htmlspecialchars($_POST['editeurJeu']), $platform, htmlspecialchars($_POST['descJeu']), htmlspecialchars($_POST['urlCover']), htmlspecialchars($_POST['urlSite']));
-            header('location:/game_collection/');
+            #header('location:/game_collection/');
         }
     }else {
         require("views/creerJeuView.php");

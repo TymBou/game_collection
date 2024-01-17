@@ -1,7 +1,9 @@
 <?php
-function getUtils() {
-    return select('SELECT nomUtil, SUM(heureDeJeu), jeu.nomJeu FROM utilisateur INNER JOIN bibliotheque ON bibliotheque.idUtil = utilisateur.idUtil INNER JOIN jeu ON jeu.idJeu = bibliotheque.idJeu INNER JOIN
-    (SELECT idUtil, nomJeu, MAX(heureDeJeu) AS maxH FROM bibliotheque NATURAL JOIN jeu GROUP BY idUtil )
-    AS tabMax ON tabMax.idUtil = utilisateur.idUtil WHERE maxH = heureDeJeu GROUP BY nomUtil, nomJeu, maxH, heureDeJeu ORDER BY SUM(heureDeJeu) DESC');
+function getUtilsTotalH() {
+    return $utils = select('SELECT utilisateur.idUtil, nomUtil, SUM(heureDeJeu) FROM utilisateur INNER JOIN bibliotheque ON bibliotheque.idUtil = utilisateur.idUtil GROUP BY nomUtil ORDER BY SUM(heureDeJeu) DESC');
+}
+
+function getJeuFav($user) {
+    return select('SELECT nomJeu, heureDeJeu FROM bibliotheque INNER JOIN jeu ON jeu.idJeu = bibliotheque.idJeu WHERE idUtil = ' . $user . ' AND heureDeJeu = (SELECT MAX(heureDeJeu) FROM bibliotheque WHERE idUtil = ' . $user . ') GROUP BY idUtil  ');
 }
 ?>
