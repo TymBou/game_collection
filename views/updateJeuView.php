@@ -19,7 +19,7 @@
                     <h2>Ajouter du temps passé sur le jeu</h2>
                     <form method='POST'>
                         <p>Temps passé sur le jeu</p>
-                        <input type="number" name="nbrHeure">
+                        <input type="number" name="nbrHeure" step=".01">
                         <br \>
                         <input class="btn btnNoMargin" type="submit" value="Ajouter">
                     </form>

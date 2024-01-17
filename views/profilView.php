@@ -31,7 +31,7 @@
             ?>
 
             <br \>
-            <a class="btn" href="?dir=profil">MODIFIER MON PROFIL</a>
+            <a class="btn" href="?dir=profilFormulaire">MODIFIER MON PROFIL</a>
             <br \><br \><br \>
             <a class="btn" href="?dir=profil&action=supprimer" onclick="return confirm('Voulez vous vraiment supprimer votre compte?')">SUPPRIMER MON COMPTE</a>
             <br \><br \><br \>
