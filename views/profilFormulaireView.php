@@ -19,10 +19,10 @@
     <nav class="liens">
       <ul>
         <li>
-          <a href="/game_collection/?dir=bibliotheque">MA BIBLIOTHÈQUE</a>
+          <a href="/game_collection/">MA BIBLIOTHÈQUE</a>
         </li>
         <li>
-          <a href="/game_collection/?dir=">AJOUTER UN JEU</a>
+          <a href="/game_collection/?dir=creerJeu">AJOUTER UN JEU</a>
         </li>
         <li>
           <a href="/game_collection/?dir=classement">CLASSEMENT</a>

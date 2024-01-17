@@ -11,30 +11,52 @@
 </head>
 
 <body>
+  <header>
+    <a href="/game_collection/?dir=bibliotheque">
+      <img class="logo" src="./ressources/Images/logo.png" alt="Game Collection" hover="Logo Game Collection">
+    </a>
 
-  <div>
-    <h2>Classement des temps passées</h2>
-  </div>
-  <div>
-    <table>
+    <nav class="liens">
+      <ul>
+        <li>
+          <a href="/game_collection/">MA BIBLIOTHÈQUE</a>
+        </li>
+        <li>
+          <a href="/game_collection/?dir=creerJeu">AJOUTER UN JEU</a>
+        </li>
+        <li>
+          <a href="/game_collection/?dir=classement">CLASSEMENT</a>
+        </li>
+        <li>
+          <a href="/game_collection/?dir=profil">PROFIL</a>
+        </li>
+      </ul>
+      </div>
+  </header>
+  <main>
+    <div>
+      <h2>Classement des temps passées</h2>
+    </div>
+    <div>
+      <table>
         <tr>
-            <th>Joueur</th>
-            <th>Temps Passés</th>
-            <th>Jeu favori</th>
+          <th>Joueur</th>
+          <th>Temps Passés</th>
+          <th>Jeu favori</th>
         </tr>
         <?php foreach ($utils as $util) { ?>
-        <tr>
-            <th><?php echo $util['nomUtil']?></th>
-            <th><?php echo $util['SUM(heureDeJeu)']?></th>
-            <th><?php echo $util['nomJeu']?></th>
-        </tr>
-            <?php } ?>
-    </table>
-  </div>
-  
+          <tr>
+            <th><?php echo $util['nomUtil'] ?></th>
+            <th><?php echo $util['SUM(heureDeJeu)'] ?></th>
+            <th><?php echo $util['nomJeu'] ?></th>
+          </tr>
+        <?php } ?>
+      </table>
+    </div>
+  </main>
+  <footer>
+    Game Collection - 2023 - Tout droits réservés
+  </footer>
 </body>
-<footer>
-  Game Collection - 2023 - Tout droits réservés
-</footer>
 
 </html>
