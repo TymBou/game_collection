@@ -134,11 +134,11 @@ a.btn {
     text-decoration: none;
 }
 
-tbody tr:nth-child(odd):not(.first) {
+tbody tr:nth-child(even):not(.first) {
     background-color: #252836;
 }
 
-tbody tr:nth-child(even):not(.first) {
+tbody tr:nth-child(odd):not(.first) {
     background-color: #211F2A;
 }
 
