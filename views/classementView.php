@@ -48,7 +48,7 @@
           <tr>
             <th><?php echo $util['nomUtil'] ?></th>
             <th><?php echo $util['SUM(heureDeJeu)'] ?></th>
-            <th><?php echo $util['nomJeu'] ?></th>
+            <th><?php echo $util[0] ?></th>
           </tr>
         <?php } ?>
       </table>

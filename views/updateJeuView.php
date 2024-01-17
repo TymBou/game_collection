@@ -40,7 +40,7 @@
                 <div>
                     <h2><?php echo $game['nomJeu'] ?></h2>
                     <p><?php echo $game['plateforme'] ?></p>
-                    <p>Temps passé : <?php echo $game['heureDeJeu'] ?></p>
+                    <p>Temps passé : <?php echo $game['heureDeJeu'] ?> H </p>
                 </div>
                 <div>
                     <h2>Ajouter du temps passé sur le jeu</h2>
