@@ -4,7 +4,7 @@ function getInfoGame($game) {
 }
 
 function updateTime($game, $time) {
-    $heureActuelle = select('SELECT heureDeJeu FROM jeu INNER JOIN bibliotheque ON bibliotheque.IdJeu = jeu.IdJeu WHERE jeu.idJeu =' . $game)[0]['heureDeJeu'];
+    $heureActuelle = select('SELECT heureDeJeu FROM jeu INNER JOIN bibliotheque ON bibliotheque.IdJeu = jeu.IdJeu WHERE idUtil = ' . $_SESSION['user'] . ' AND jeu.idJeu =' . $game)[0]['heureDeJeu'];
 
     $nouvelleHeure = $heureActuelle + intval($time);
     if ($nouvelleHeure < 0) {

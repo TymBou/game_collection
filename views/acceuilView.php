@@ -13,6 +13,7 @@
 <body>
   <main>
     <div>
+      <img src="ressources\Images\20221130_165430.jpg">
       <h1>Salut <?php echo $nomUtil; ?> ! Prêt à ajouter des jeux à ta collection ?</h1>
     </div>
     <div>
