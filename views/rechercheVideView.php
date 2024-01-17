@@ -12,17 +12,18 @@
 
 <body>
     <main>
-        <div>
+        <div style="margin-left:5%">
             <h1>Ajouter un jeu à ma bibliothèque</h1>
             <form method="post">
                 <input type="text" name="jeuRecherche" placeholder="Rechercher un jeu">
-                <input type="submit">
+                <br \>
+                <input class="btn btnNoMargin" type="submit">
             </form>
         </div>
 
-        <div>
+        <div style="margin-left:5%">
             <h2>Aucun jeu disponible :</h2>
-            <a href='/game_collection/?dir=creerJeu'>Ajouter un jeu</a>
+            <a class="btn btnNoMargin" href='/game_collection/?dir=creerJeu'>Ajouter un jeu</a>
         </div>
     </main>
 </body>

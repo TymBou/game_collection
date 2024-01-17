@@ -17,7 +17,7 @@
             <form method="post">
                 <input type="text" name="jeuRecherche" placeholder="Rechercher un jeu">
                 <br \>
-                <input class="btn" type="submit" style="margin:0 !important;">
+                <input class="btn btnNoMargin" type="submit" style="margin:0 !important;">
             </form>
         </div>
 
