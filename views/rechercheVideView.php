@@ -41,7 +41,7 @@
 
         <div>
             <h2>Aucun jeu disponible :</h2>
-            <a href='/game_collection/?dir=creerJeu'>gnangnan un jeu</a>
+            <a href='/game_collection/?dir=creerJeu'>Ajouter un jeu</a>
         </div>
     </main>
 

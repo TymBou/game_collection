@@ -5,7 +5,7 @@
         
         $jeu = verifJeu($_POST["nomJeu"]);
         if ($jeu != null) {
-            var_dump($jeu);
+
             $jeu = $jeu[0];
         
             if (sizeof($jeu) > 0) {
@@ -14,6 +14,7 @@
                     addJeu($jeu['idJeu'], $_SESSION['user']);
                 }
                 require("views/jeuExisteView.php");
+
             }
         } else {
             $cpt = 0;
