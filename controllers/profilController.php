@@ -8,7 +8,7 @@ $lName = $infos['nomUtil'];
 $fName = $infos['prenom'];
 $email = $infos['email'];
 
-if ($dir == 'profil') {
+if ($dir == 'profilFormulaire') {
     if (isset($_POST["lastName"]) && isset($_POST["firstName"]) && isset($_POST["email"]) && isset($_POST["pwd"]) && isset($_POST["pwdConf"])) {
         $lName = htmlspecialchars($_POST["lastName"]);
         $fName = htmlspecialchars($_POST['firstName']);
@@ -27,7 +27,7 @@ if ($dir == 'profil') {
 
         if (!$message || $message == 'pas pwd') {
             $message = 'compte modifié avec succès';
-            header("Refresh: 3; url=/game_collection/?dir=profil");
+            header("Refresh: 2; url=/game_collection/?dir=profil");
         }
     }
 }
@@ -47,7 +47,9 @@ if(isset($_GET['action'])) {
 }
 
 
-if ($dir == 'profil') {
+if ($dir == 'profilFormulaire') {
     require './views/profilFormulaireView.php';
+} else if ($dir == 'profil') {
+    require './views/profilView.php';
 }
 ?>
