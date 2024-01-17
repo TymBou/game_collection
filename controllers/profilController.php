@@ -8,7 +8,7 @@ $lName = $infos['nomUtil'];
 $fName = $infos['prenom'];
 $email = $infos['email'];
 
-if ($dir == 'profilFormulaire') {
+if ($dir == 'profil') {
     if (isset($_POST["lastName"]) && isset($_POST["firstName"]) && isset($_POST["email"]) && isset($_POST["pwd"]) && isset($_POST["pwdConf"])) {
         $lName = htmlspecialchars($_POST["lastName"]);
         $fName = htmlspecialchars($_POST['firstName']);
@@ -47,9 +47,7 @@ if(isset($_GET['action'])) {
 }
 
 
-if ($dir == 'profilFormulaire') {
+if ($dir == 'profil') {
     require './views/profilFormulaireView.php';
-} else if ($dir == 'profil') {
-    require './views/profilView.php';
 }
 ?>
