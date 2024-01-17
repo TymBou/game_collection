@@ -26,7 +26,7 @@
         <input type="password" name="pwd" value="<?php echo $pwd ?>">
         <p>Confirmation du mot de passe :</p>
         <input type="password" name="pwdConf" value="<?php echo $pwdConf ?>">
-
+        <br \>
         <?php
         if ($message) {
           echo $message;

@@ -20,13 +20,16 @@
             </form>
         </div>
 
-        <div>
+        <div class="cards">
             <?php foreach ($games as $game) { ?>
-                <div>
-                    <img src="<?php echo $game['URLCover'] ?>">
-                    <h2><?php echo $game['nomJeu'] ?></h2>
-                    <p><?php echo $game['plateforme'] ?></p>
-                    <a href="?dir=recherche&action=ajout&jeu=<?php echo $game['idJeu'] ?>">Ajouter à ma bibliothèque</a>
+                <div class="card" style="background: url(<?php echo $game['URLCover'] ?>) 50%, linear-gradient(to top, rgba(0, 0, 0, 0.9) 40%, rgba(255, 255, 255, 0.9) 60%); background-blend-mode:multiply;">
+                    <div class="infoCard">
+                        <div class="textCard">
+                            <h2><?php echo $game['nomJeu'] ?></h2>
+                            <p><?php echo $game['plateforme'] ?></p>
+                            <a href="?dir=recherche&action=ajout&jeu=<?php echo $game['idJeu'] ?>">Ajouter à ma bibliothèque</a>
+                        </div>
+                    </div>
                 </div>
             <?php } ?>
         </div>
