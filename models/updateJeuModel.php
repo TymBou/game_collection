@@ -1,6 +1,6 @@
 <?php
 function getInfoGame($game) {
-    return select('SELECT jeu.idJeu, nomJeu, URLCover, plateforme, heureDeJeu FROM jeu INNER JOIN bibliotheque ON bibliotheque.IdJeu = jeu.IdJeu WHERE jeu.idJeu =' . $game . ' AND idUtil = ' . $_SESSION['user'])[0];
+    return select('SELECT jeu.idJeu, nomJeu, URLCover, plateforme, heureDeJeu, URLSite FROM jeu INNER JOIN bibliotheque ON bibliotheque.IdJeu = jeu.IdJeu WHERE jeu.idJeu =' . $game . ' AND idUtil = ' . $_SESSION['user'])[0];
 }
 
 function updateTime($game, $time) {

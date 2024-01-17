@@ -10,7 +10,7 @@
 
 <body>
     <header>
-        <a href="/game_collection/?dir=bibliotheque">
+        <a href="/game_collection/">
             <img class="logo" src="./ressources/Images/logo.png" alt="Game Collection" hover="Logo Game Collection">
         </a>
 
@@ -34,7 +34,7 @@
     <main>
         <div>
             <div>
-                <img src="<?php echo $game['URLCover'] ?>">
+                <a href="<?php echo $game['URLSite'] ?>"><img src="<?php echo $game['URLCover'] ?>"></a>
             </div>
             <div>
                 <div>
