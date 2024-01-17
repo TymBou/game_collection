@@ -32,7 +32,6 @@ if ($dir == 'profil') {
     }
 }
 
-
 if(isset($_GET['action'])) {
     $action = htmlspecialchars($_GET['action']);
     $deconnection = false;
