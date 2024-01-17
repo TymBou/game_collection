@@ -1,0 +1,222 @@
+* {
+    font-family: 'Barlow', sans-serif;
+}
+
+header {
+    background-color: #211F2A;
+    margin-bottom: 5%;
+}
+
+header>a {
+    background: none;
+    backface-visibility: hidden;
+    color: #FFFFFF;
+    border: 1px solid #211F2A;
+}
+
+footer {
+    background-color: #211F2A;
+    text-align: center;
+    margin-top: 10vh;
+}
+
+body {
+    background-color: #211F2A;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.logo {
+    float: left;
+}
+
+.liens {
+    float: right;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 10%;
+    width: 50%;
+}
+
+.connexionDiv {
+    background-color: #252836;
+    color: #FFFFFF;
+    border-radius: 20px;
+    border: 1px solid #252836;
+    height: 55vh;
+    width: 40vw;
+}
+
+.connexionDiv input:not(.connexionBtn) {
+    width: 70vh;
+    height: 4vh;
+}
+
+.inscriptionDiv {
+    background-color: #252836;
+    color: #FFFFFF;
+    border-radius: 20px;
+    border: 1px solid #252836;
+    height: 85vh;
+    width: 45vw;
+}
+
+.inscriptionDiv input:not(.inscriptionBtn) {
+    width: 70vh;
+    height: 4vh;
+}
+
+.btn {
+    background-color: #6757D6;
+    color: #FFFFFF;
+    border-radius: 6px;
+    border: 1px solid #6757D6;
+    cursor: pointer;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 131.89px;
+    height: 36px;
+}
+
+.profil {
+    margin-left: 10%;
+    margin-top: 5%;
+}
+
+.profil input {
+    width: 300px;
+    height: 36px;
+}
+
+form input:not(.btn) {
+    width: 300px;
+    height: 36px;
+}
+
+input {
+    background-color: #2B2F40;
+    border-radius: 4px;
+    border: 1px solid #2B2F40;
+    color: #FFFFFF;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a.btn {
+    padding: 10px 15px;
+    text-decoration: none;
+}
+
+tbody tr:nth-child(even):not(.first) {
+    background-color: #252836;
+}
+
+tbody tr:nth-child(odd):not(.first) {
+    background-color: #211F2A;
+}
+
+tbody tr {
+    text-align: center;
+}
+
+tbody th {
+    text-align: left;
+}
+
+th,
+td {
+    padding: 10px;
+}
+
+table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.creerJeuDiv {
+    margin-left: 10%;
+    margin-top: 5%;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    border-radius: 4px;
+    width: 391px;
+    height: 300px;
+    background-position: center;
+    position: relative;
+    margin-bottom: 2%;
+}
+
+.cards{
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    justify-content: space-between;
+}
+
+img {
+    border-radius: 4px 4px 0 0;
+}
+
+.infoCard{
+    position: absolute;
+    bottom: 25;
+    width:100%;
+}
+
+.textCard{
+    margin-left: 5%;
+}
+.heureDeJeu{
+    font-size: 1.2em;
+}
+
+.h1acc{
+    margin-left: 5%;
+    font-size: 3em;
+    position: absolute;
+    bottom: 30;
+}
+
+.firstAccueil{
+    height: 400px;
+    background: url("../ressources/Images/backgroundAccueil.png"), rgba(0, 0, 0, 0.3);
+    background-blend-mode: multiply;
+    background-size: cover;
+    margin-bottom: 3%;
+    position: relative;
+}
+
+h3{
+    margin-left: 10%;
+}
