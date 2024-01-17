@@ -16,17 +16,4 @@ function executeQuery($query)
     $res = connectionBDD()->prepare($query);
     $res->execute();
 }
-
-function getMaxIdUser()
-{
-    $users = select('SELECT idUtil FROM utilisateur');
-    $maxNombre = -1;
-    foreach ($users as $value) {
-        $nombre = $value["idUtil"];
-        if ($nombre > $maxNombre) {
-            $maxNombre = $nombre;
-        }
-    }
-    return $maxNombre;
-}
 ?>

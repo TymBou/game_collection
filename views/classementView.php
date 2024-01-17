@@ -25,7 +25,7 @@
         <?php foreach ($utils as $util) { ?>
           <tr>
             <th><?php echo $util['nomUtil'] ?></th>
-            <th><?php echo $util['SUM(heureDeJeu)'] ?></th>
+            <th><?php echo $util['SUM(heureDeJeu)'] ?> H</th>
             <th><?php echo $util[0] ?></th>
           </tr>
         <?php } ?>
