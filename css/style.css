@@ -1,4 +1,4 @@
-*{
+* {
     font-family: 'Barlow', sans-serif;
 }
 
@@ -14,14 +14,10 @@ header>a {
     border: 1px solid #211F2A;
 }
 
-main {
-    width: 1440px;
-    height: 746px;
-}
-
 footer {
     background-color: #211F2A;
     text-align: center;
+    margin-top: 10vh;
 }
 
 body {
@@ -57,18 +53,41 @@ li a {
     text-decoration: none;
 }
 
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 10%;
+    width: 50%;
+}
 
 .connexionDiv {
     background-color: #252836;
     color: #FFFFFF;
     border-radius: 20px;
     border: 1px solid #252836;
-    width: 600px;
+    height: 55vh;
+    width: 40vw;
 }
 
 .connexionDiv input:not(.connexionBtn) {
-    width: 520px;
-    height: 36px;
+    width: 70vh;
+    height: 4vh;
+}
+
+.inscriptionDiv {
+    background-color: #252836;
+    color: #FFFFFF;
+    border-radius: 20px;
+    border: 1px solid #252836;
+    height: 85vh;
+    width: 45vw;
+}
+
+.inscriptionDiv input:not(.inscriptionBtn) {
+    width: 70vh;
+    height: 4vh;
 }
 
 .btn {
@@ -78,18 +97,9 @@ li a {
     border: 1px solid #6757D6;
     cursor: pointer;
     margin-top: 5%;
+    margin-bottom: 5%;
     width: 131.89px;
     height: 36px;
-    margin-bottom: 5%;
-}
-
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    margin-top: 10%;
-    width: 50%;
 }
 
 .profil {
@@ -117,4 +127,41 @@ input {
 a {
     text-decoration: none;
     color: white;
+}
+
+a.btn {
+    padding: 10px 15px;
+    text-decoration: none;
+}
+
+tbody tr:nth-child(odd):not(.first) {
+    background-color: #252836;
+}
+
+tbody tr:nth-child(even):not(.first) {
+    background-color: #211F2A;
+}
+
+tbody tr {
+    text-align: center;
+}
+
+tbody th {
+    text-align: left;
+}
+
+th,
+td {
+    padding: 10px;
+}
+
+table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.creerJeuDiv {
+    margin-left: 10%;
+    margin-top: 5%;
 }
